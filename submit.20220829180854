@@ -1,0 +1,60 @@
+Assignment Submission
+       Unit: cosc350
+ Assignment: a1
+   Username: bwatso25
+     Who is: Bryce Watson <bwatso25@myune.edu.au>
+       Date: Mon 29 Aug 2022 18:08:54 AEST
+----------------------------------------------------------------
+Files submitted:
+-rwxrwxrwx. 1 bwatso25 bwatso25 9.1K Aug 29 18:06 bwatso25.py
+-rw-r--r--. 1 bwatso25 bwatso25  311 Aug 29 18:07 readme.md
+----------------------------------------------------------------
+Script of session:
+Script started on 2022-08-29 18:08:16+10:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="299" LINES="17"]
+]0;bwatso25@turing:~/Desktop/2022 work/Cosc350/a1[?2004h[36m[[m[34mbwatso25@turing[m [32ma1[m[36m][m $ b[Kpython bwatso25.py
+[?2004l
+COSC350 PROGRAMMING ASSIGNMENT 1- PYTHON MAZE AI
+
+AUTHOR: Bryce Watson
+
+STUDENT NUMBER: 220199390
+
+UNE Account name: bwatso25
+
+ABOUT THE PROGRAM:
+ This program implements an AI Reinforcement Q-Learning Agent to solve a hard-coded maze in Python.
+ It utilises temporal-difference learning (tdl) to learn about its environment and uses the epsilon-greedy algorithm to determine its next move at each state.
+
+An Learning agent utilising temporal-difference learning learns by taking an action, and observing the reward for that action. It then updates its internal model by updating the reward for that state. In this way the AI can learn the optimal move at each state.
+The Epsilon-greedy algorithm involves choosing the most promising action based on the value of epsilon. At Epsilon = 0.9, The agent will choose the action with the highest reward at each state 90%* of the time. the rest of the time it will choose a random action.
+
+Here is some example psuedocode:
+If random.value < epsilon: return max(q_values[row,column')
+else: return random_action()
+
+FINDING THE SHORTEST PATH THROUGH THE MAZE: Once the agent has been trained, it should have enough information about each state and action to find a path through the maze. When generating the optimal path, the Ai will use epislon greedy at epsilon = 100
+which means it will choose the best action to take at every state. After every action, it moves to the new state and adds that location to the path. Once the agent has reached the goal, it will print the optimal path to console.
+
+This is the rewards table for the maze. -1 is an empty space, -100 means a wall while 100 is the end goal: 
+
+[  -1. -100. -100. -100. -100. -100. -100. -100.]
+[  -1.   -1.   -1. -100.   -1.   -1.   -1. -100.]
+[  -1. -100.   -1. -100.   -1. -100.   -1.   -1.]
+[  -1.   -1. -100.   -1.   -1. -100.   -1. -100.]
+[-100.   -1. -100.   -1. -100. -100.   -1.   -1.]
+[  -1.   -1. -100.   -1.   -1.   -1. -100.   -1.]
+[  -1. -100.   -1.   -1. -100.   -1. -100.   -1.]
+[  -1.   -1.   -1. -100.   -1.   -1. -100.  100.]
+
+
+Agent is now doing 500 Training episodes in the maze.
+
+Training Complete!
+
+The shortest path through the maze: 
+ [[0, 0], [1, 0], [2, 0], [3, 0], [3, 1], [4, 1], [5, 1], [5, 0], [6, 0], [7, 0], [7, 1], [7, 2], [6, 2], [6, 3], [5, 3], [4, 3], [3, 3], [3, 4], [2, 4], [1, 4], [1, 5], [1, 6], [2, 6], [3, 6], [4, 6], [4, 7], [5, 7], [6, 7], [7, 7]]
+]0;bwatso25@turing:~/Desktop/2022 work/Cosc350/a1[?2004h[36m[[m[34mbwatso25@turing[m [32ma1[m[36m][m $ exit
+[?2004lexit
+
+Script done on 2022-08-29 18:08:30+10:00 [COMMAND_EXIT_CODE="0"]
+3289
